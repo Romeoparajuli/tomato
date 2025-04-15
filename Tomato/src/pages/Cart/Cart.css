@@ -1,0 +1,160 @@
+.cart {
+    margin-top: 100px;
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: gray;
+    font-size: max(1vw, 12px);
+}
+
+.cart-items-items {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    margin: 10px 0px;
+    color: black;
+}
+
+.cart-items-items img {
+    width: 50px;
+}
+
+.cart hr {
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.cart-items-items .cross {
+    cursor: pointer;
+}
+
+.cart-bottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw, 20px);
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+.cart-total hr {
+    margin: 10px 0px;
+}
+
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: 100%; /* Make button responsive */
+    max-width: 300px; /* Limit the button width */
+    padding: 12px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Improve readability */
+    transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+.cart-total button:hover {
+    background-color: darkred; /* Darker shade for hover */
+}
+
+.cart-promocode {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-promocode p {
+    color: #555;
+    font-size: 14px; /* Adjust font size for better readability */
+}
+.cart-promocode-input {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9; /* Softer background for better contrast */
+    border: 1px solid #ddd; /* Add a subtle border */
+    border-radius: 6px; /* Slightly rounded corners for a modern look */
+    padding: 8px 10px; /* Add more padding for better spacing */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Enhance shadow for a professional look */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.cart-promocode-input:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.cart-promocode-input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    flex: 1; /* Allow input to take available space */
+    font-size: 16px; /* Increase font size for better readability */
+    color: #333; /* Darker text for better contrast */
+}
+
+.cart-promocode-input input::placeholder {
+    color: #aaa; /* Subtle placeholder color */
+    font-style: italic; /* Make placeholder text more distinct */
+}
+
+.cart-promocode-input button {
+    width: max(10vw, 150px);
+    padding: 12px;
+    background-color: #007bff; /* Professional blue color */
+    border: none;
+    color: white;
+    border-radius: 6px; /* Match the input's rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: bold; /* Make the text stand out */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth hover effects */
+}
+
+.cart-promocode-input button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.cart-promocode-input button:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+    background-color: #004494; /* Even darker blue for active state */
+}
+
+@media (max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .cart-promocode {
+        justify-content: start;
+    }
+
+    .cart-total button {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .cart-promocode-input button {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+}

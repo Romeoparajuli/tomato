@@ -1,0 +1,69 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat;
+    background-size: contain;
+    position: relative;
+
+
+}
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    bottom: 10%;
+    left: 6vw;
+    max-width: 90%; /* Prevents the text from overflowing */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    animation: fadeIn 3s;
+}
+.header-contents h2 {
+    font-weight: 700;
+    color: white;
+    font-size: max(3vw, 20px); /* Responsive font size */
+    line-height: 1.2; /* Adjust spacing between lines */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Ensures long words break */
+}
+
+.header-contents p {
+    font-size: max(1.2vw, 14px); /* Balanced and responsive font size */
+    line-height: 1.6; /* Improved readability with better spacing */
+    color: white;
+    margin: 0;
+    text-align: justify; /* Aligns text evenly on both sides */
+    max-width: 480px; /* Slightly narrower for better UX */
+    overflow: hidden; /* Prevents overflow */
+    display: -webkit-box; /* Enables line clamping */
+    word-break: break-word; /* Ensures long words break properly */
+}
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.5vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+
+}
+
+@media(max-width:1050px){
+
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media(max-width:750px){
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
